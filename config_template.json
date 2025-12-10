@@ -1,0 +1,23 @@
+{
+  "_comment": "Configuration file for Word to PDF Converter",
+  "_instructions": "Fill in the paths below and run: python word_to_pdf.py --config",
+  
+  "input_file": "C:\\path\\to\\your\\document.docx",
+  "output_file": "C:\\path\\to\\your\\output.pdf",
+  
+  "batch_mode": false,
+  "recursive": false,
+  
+  "_batch_mode_comment": "Set batch_mode to true to convert all Word files in a folder",
+  "input_folder": "C:\\path\\to\\input\\folder",
+  "output_folder": "C:\\path\\to\\output\\folder",
+  
+  "_notes": [
+    "For single file conversion: Set batch_mode=false and specify input_file and output_file",
+    "For batch conversion: Set batch_mode=true and specify input_folder and output_folder",
+    "If output_file or output_folder is empty, PDFs will be saved in the same location as source files",
+    "Set recursive=true to process subfolders in batch mode",
+    "Use double backslashes (\\\\) in Windows paths or forward slashes (/) work too"
+  ]
+}
+

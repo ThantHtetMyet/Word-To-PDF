@@ -1,0 +1,4 @@
+# Requirements for GUI version
+pywin32>=307
+pyinstaller>=6.10.0
+

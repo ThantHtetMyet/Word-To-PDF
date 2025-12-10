@@ -1,0 +1,80 @@
+WORD TO PDF CONVERTER - SETUP GUIDE
+====================================
+
+PREREQUISITES:
+--------------
+1. Python 3.7 or higher must be installed
+2. Microsoft Word must be installed on your Windows system
+3. pip (Python package manager) should be available
+
+INSTALLATION STEPS:
+-------------------
+
+Step 1: Open Command Prompt or PowerShell in this directory
+
+Step 2: Install required packages
+   Run: pip install -r requirements.txt
+
+Step 3: Verify installation
+   Run: python -c "import docx2pdf; print('Installation successful!')"
+
+QUICK START:
+------------
+
+METHOD 1: Using Config File (EASIEST)
+1. Edit config.json with your file path:
+   {
+     "input_file": "C:\\path\\to\\your\\document.docx",
+     "output_file": "C:\\path\\to\\your\\output.pdf",
+     "batch_mode": false
+   }
+
+2. Run: python word_to_pdf.py --config
+
+METHOD 2: Command-Line
+1. Convert a single Word file:
+   python word_to_pdf.py "your_document.docx"
+
+2. Convert with custom output:
+   python word_to_pdf.py "input.docx" -o "output.pdf"
+
+3. Convert all Word files in a folder:
+   python word_to_pdf.py "your_folder" --batch
+
+4. Get help:
+   python word_to_pdf.py --help
+
+TROUBLESHOOTING:
+----------------
+
+Problem: "Microsoft Word is not installed"
+Solution: This script requires MS Word. Install Word or use an alternative like LibreOffice.
+
+Problem: "pip is not recognized"
+Solution: Make sure Python is added to your PATH, or use: python -m pip install -r requirements.txt
+
+Problem: "Permission denied"
+Solution: Run as administrator or check file/folder permissions.
+
+Problem: COM errors
+Solution: Close all Word documents and try again. If it persists, restart your computer.
+
+FEATURES:
+---------
+✓ Preserves all formatting, fonts, and styles
+✓ Maintains images and their quality
+✓ Keeps tables, headers, and footers intact
+✓ Preserves page layout and margins
+✓ Maintains hyperlinks and bookmarks
+✓ Fast conversion using native Word engine
+✓ Batch processing support
+✓ Recursive folder scanning
+✓ Error handling and reporting
+
+NOTES:
+------
+- The conversion quality is identical to Word's native "Save as PDF" feature
+- Both .docx and .doc formats are supported
+- Large files may take longer to convert
+- Output directory is created automatically if it doesn't exist
+
